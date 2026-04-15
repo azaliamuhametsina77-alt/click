@@ -58,7 +58,7 @@ html, body {
   width: 100%;
   height: 100%;
   display: block;
-  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.18));
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.28));
 }
 
 .cursor-arrow,
@@ -69,15 +69,15 @@ html, body {
 }
 
 .popup-link-wrap.is-visible .cursor-demo {
-  animation: cursorMove 1.55s cubic-bezier(.22,.75,.2,1) forwards;
+  animation: cursorMove 2.6s cubic-bezier(.22,.75,.2,1) forwards;
 }
 
 .popup-link-wrap.is-visible .cursor-arrow {
-  animation: arrowShow 1.55s linear forwards;
+  animation: arrowShow 2.6s linear forwards;
 }
 
 .popup-link-wrap.is-visible .cursor-hand {
-  animation: handShow 1.55s linear forwards;
+  animation: handShow 2.6s linear forwards;
 }
 
 @keyframes cursorMove {
@@ -104,11 +104,11 @@ html, body {
     opacity: 1;
     transform: scale(1);
   }
-  64% {
+  72% {
     opacity: 1;
     transform: scale(1);
   }
-  72% {
+  79% {
     opacity: 0;
     transform: scale(0.9);
   }
@@ -123,21 +123,21 @@ html, body {
     opacity: 0;
     transform: scale(0.82);
   }
-  63% {
+  73% {
     opacity: 0;
     transform: scale(0.82);
   }
-  74% {
+  82% {
     opacity: 1;
-    transform: scale(1.18);
+    transform: scale(1.16);
   }
-  86% {
+  91% {
     opacity: 1;
     transform: scale(0.96);
   }
   100% {
     opacity: 0;
-    transform: scale(1.08);
+    transform: scale(1.06);
   }
 }
 
@@ -159,17 +159,17 @@ html, body {
   }
 
   .popup-link-wrap.is-visible .cursor-demo {
-    animation: cursorMoveMobile 1.55s cubic-bezier(.22,.75,.2,1) forwards;
+    animation: cursorMoveMobile 2.6s cubic-bezier(.22,.75,.2,1) forwards;
   }
 
   @keyframes cursorMoveMobile {
     0% {
       opacity: 0;
-      transform: translate(-135px, -70px) scale(0.92);
+      transform: translate(-135px, 70px) scale(0.92);
     }
     10% {
       opacity: 1;
-      transform: translate(-135px, -70px) scale(0.96);
+      transform: translate(-135px, 70px) scale(0.96);
     }
     62% {
       opacity: 1;
@@ -192,15 +192,15 @@ html, body {
     <div class="cursor-demo" aria-hidden="true">
       <div class="cursor-arrow">
         <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 5.5L36.5 26.2L24.5 28.5L30.8 41.2C31.6 42.8 31 44.7 29.4 45.4L27.6 46.2C26 46.9 24.1 46.3 23.3 44.8L17 32.1L8.4 40.8L9 5.5Z" fill="#20242B"/>
-          <path d="M9 5.5L36.5 26.2L24.5 28.5L30.8 41.2C31.6 42.8 31 44.7 29.4 45.4L27.6 46.2C26 46.9 24.1 46.3 23.3 44.8L17 32.1L8.4 40.8L9 5.5Z" stroke="#ffffff" stroke-width="2"/>
+          <path d="M9 5.5L36.5 26.2L24.5 28.5L30.8 41.2C31.6 42.8 31 44.7 29.4 45.4L27.6 46.2C26 46.9 24.1 46.3 23.3 44.8L17 32.1L8.4 40.8L9 5.5Z" fill="#ffffff"/>
+          <path d="M9 5.5L36.5 26.2L24.5 28.5L30.8 41.2C31.6 42.8 31 44.7 29.4 45.4L27.6 46.2C26 46.9 24.1 46.3 23.3 44.8L17 32.1L8.4 40.8L9 5.5Z" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
         </svg>
       </div>
 
       <div class="cursor-hand">
         <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.6 22.1V10.4C17.6 8.5 19.1 7 21 7C22.9 7 24.4 8.5 24.4 10.4V20.2H25.8V8.7C25.8 6.8 27.3 5.3 29.2 5.3C31.1 5.3 32.6 6.8 32.6 8.7V21H34V12.1C34 10.2 35.5 8.7 37.4 8.7C39.3 8.7 40.8 10.2 40.8 12.1V28.1C40.8 36.5 34 43.3 25.6 43.3H23.8C18.8 43.3 14.2 40.8 11.5 36.6L6.9 29.6C5.8 27.8 6.3 25.4 8.1 24.3C9.9 23.2 12.3 23.7 13.4 25.5L16.1 29.6V22.1C16.1 20.2 17.6 18.7 19.5 18.7C21.4 18.7 22.9 20.2 22.9 22.1V28H24.4V22.1H17.6Z" fill="#20242B"/>
-          <path d="M17.6 22.1V10.4C17.6 8.5 19.1 7 21 7C22.9 7 24.4 8.5 24.4 10.4V20.2H25.8V8.7C25.8 6.8 27.3 5.3 29.2 5.3C31.1 5.3 32.6 6.8 32.6 8.7V21H34V12.1C34 10.2 35.5 8.7 37.4 8.7C39.3 8.7 40.8 10.2 40.8 12.1V28.1C40.8 36.5 34 43.3 25.6 43.3H23.8C18.8 43.3 14.2 40.8 11.5 36.6L6.9 29.6C5.8 27.8 6.3 25.4 8.1 24.3C9.9 23.2 12.3 23.7 13.4 25.5L16.1 29.6V22.1C16.1 20.2 17.6 18.7 19.5 18.7C21.4 18.7 22.9 20.2 22.9 22.1V28H24.4V22.1H17.6Z" stroke="#ffffff" stroke-width="2"/>
+          <path d="M17.6 22.1V10.4C17.6 8.5 19.1 7 21 7C22.9 7 24.4 8.5 24.4 10.4V20.2H25.8V8.7C25.8 6.8 27.3 5.3 29.2 5.3C31.1 5.3 32.6 6.8 32.6 8.7V21H34V12.1C34 10.2 35.5 8.7 37.4 8.7C39.3 8.7 40.8 10.2 40.8 12.1V28.1C40.8 36.5 34 43.3 25.6 43.3H23.8C18.8 43.3 14.2 40.8 11.5 36.6L6.9 29.6C5.8 27.8 6.3 25.4 8.1 24.3C9.9 23.2 12.3 23.7 13.4 25.5L16.1 29.6V22.1C16.1 20.2 17.6 18.7 19.5 18.7C21.4 18.7 22.9 20.2 22.9 22.1V28H24.4V22.1H17.6Z" fill="#ffffff"/>
+          <path d="M17.6 22.1V10.4C17.6 8.5 19.1 7 21 7C22.9 7 24.4 8.5 24.4 10.4V20.2H25.8V8.7C25.8 6.8 27.3 5.3 29.2 5.3C31.1 5.3 32.6 6.8 32.6 8.7V21H34V12.1C34 10.2 35.5 8.7 37.4 8.7C39.3 8.7 40.8 10.2 40.8 12.1V28.1C40.8 36.5 34 43.3 25.6 43.3H23.8C18.8 43.3 14.2 40.8 11.5 36.6L6.9 29.6C5.8 27.8 6.3 25.4 8.1 24.3C9.9 23.2 12.3 23.7 13.4 25.5L16.1 29.6V22.1C16.1 20.2 17.6 18.7 19.5 18.7C21.4 18.7 22.9 20.2 22.9 22.1V28H24.4V22.1H17.6Z" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
         </svg>
       </div>
     </div>
